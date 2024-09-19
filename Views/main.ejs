@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Charis-Meal-Plan</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        
+    }
+    ::-webkit-scrollbar{
+      display: none;
+    }
+    body{
+      background: #044d5e;
+    }
+    .text-top{
+      text-align: center;
+    }
+    header{
+        width: 100%;
+        padding: .4em 0;
+        background: #cfac18 ;
+    }
+    header p{
+        color:#fff;
+        font-weight: 400;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .1em;
+    }
+    .li-text{
+        font-family: "Open Sans", sans-serif ;
+        font-weight: 600;
+        color: #044d5e;
+        font-size: 14px;
+    }
+
+
+    .custom-shape-divider-top-1726366364 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+    .custom-shape-divider-top-1726366364 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 3.3px);
+        height: 60px;
+     }
+
+    .custom-shape-divider-top-1726366364 .shape-fill {
+        fill: #FFFFFF;
+      }
+      .box-img:hover{
+        scale: 1.03;
+      }
+      .price{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .hero{
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        background: #fff;
+        position: relative;
+        padding: 2em 0;
+        width: 100vw;
+        z-index: 20000;
+      }
+
+      .grid-a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1em;
+      }
+      .grid-a h3{
+        color: #044d5e;
+        font-weight: bolder;
+        font-family: "ADLaM Display", system-ui;
+        font-size: 26px;
+        
+      }
+      .grid-a p{
+        font-weight: 600;
+        font-family: "ADLaM Display", system-ui;
+        margin-top: .8em;
+        color: #044d5e;
+        font-size: 16px;
+
+      }
+      .grid-a-li{
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+      }
+      .btn{
+        margin-top: 1em;
+      }
+      .btn-a{
+        font-family: "ADLaM Display", system-ui;
+      }
+
+      .grid-b{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      place-content: center;
+      position: relative;
+    }
+      .grid-b-book{
+        width: 80%;
+        height: 50%;
+        align-self: center;
+        transform: translate(3.6em,3.3em);
+        rotate: 10deg;
+        z-index: 30000;
+        border-radius: .4rem;
+      }
+      .grid-b-book2{
+        width: 8rem;
+        height: 8rem;
+        position: absolute;
+        bottom: 1em;
+        left: 4em;
+        border-radius: 50%;
+        z-index: -1;
+      }
+
+
+      .sec-b{
+        height: 180vh;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        background: #044d5e;
+        position: relative;
+        padding: 2em .8em;
+      }
+      .meal-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+      }
+      .box-img{
+        width: 8em;
+        height: 10em;
+        object-fit: cover;
+        margin-bottom: .2em;
+        border-radius: 1em;
+        transition: .5s;
+        margin-top: 2.4em;
+      }
+    .box-b{
+       display: flex;
+       flex-direction: column;
+       gap: .5em;
+       align-items: center;
+       justify-content: center;
+
+    }
+    .txt{
+      text-align:center;
+    }
+
+    .sec-c{
+      background: #fff;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 4em 0;
+    }
+
+
+    .custom-shape-divider-top-1726468486 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1726468486 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 73px;
+}
+
+.custom-shape-divider-top-1726468486 .shape-fill {
+    fill: #044d5e;
+}
+
+.sec-c h2{
+      color: #044d5e;
+      font-family: "ADLaM Display", system-ui;
+      font-size: 1.8em;
+      margin: 1em 0;
+    }
+    .slider{
+      width: 80vw;
+      height: 70%;
+      background: transparent;
+      padding: 2em 1em;
+      gap: .8em;
+      overflow-x: scroll;
+      display: grid;
+      grid-auto-flow: column;
+      /* grid-auto-columns: 36%; */
+    }
+
+    .slide-box{
+      width: 14em;
+      height: fit-content;
+      background: #fff;
+      display: grid;
+      grid-auto-flow: row;
+      padding: 0em;
+      margin: .4em;
+    }
+    .top{
+      display: flex;
+      flex-direction: row;
+      gap: .2em;
+      align-items: center;
+    }
+
+
+    .book{
+      width: 90vw;
+      height: fit-content;
+      background: #044d5e;
+      margin: auto;
+      display: grid;
+      grid-template-rows: 1.2fr 1fr;
+      padding: 2.6em 0em;
+      place-items: center;
+    }
+    .book-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .book article{
+       font-weight: 600;
+       color: #fff;
+       margin: .6rem .2em;
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .book-image{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 60%;
+      height: 70%;
+    }
+
+    .table{
+        height: fit-content;
+        background: #fff;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        padding: 1em;
+        gap: 1em;
+    }
+    .grid-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:.4rem;
+        grid-auto-columns: 60%;
+        padding: 1em;
+
+    }
+
+    .grid-box div{
+       background: #044d5e;
+       width: 60;
+       border-radius: .4rem;
+    }
+    .opt-box{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       gap: 1em;
+    }
+    .opt-box h4{
+      color: #fff;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .profile{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       gap: 1em;
+       padding: .8rem .8rem;
+       background: #ff6314;
+       border-radius:.5rem;
+       box-shadow: -10px 8px 24px gray;
+    }
+.drop-down{
+        height: fit-content;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap:1em;
+        padding: 4em 1em;
+}
+
+.faqs{
+  width: 90%;
+  border: 1px solid #234;
+  padding: .5rem 1em;
+  border-radius: .5rem;
+  height: fit-content;
+}
+
+
+/* .faqs article{
+  display:none;
+} */
+.hide{
+  display:none;
+}
+.show{
+  display: block;
+}
+
+.hide-image{
+      display: none;
+    }
+
+    @media screen and (min-width:760px) {
+      .hero{
+        height: 80vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: #fff;
+        position: relative;
+        padding: 2em 0;
+      }
+    
+      .grid-a{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 4em;
+      }
+      .grid-a h3{
+        color: #044d5e;
+        font-weight: bolder;
+        font-family: "ADLaM Display", system-ui;
+        font-size: 40px;
+        
+      }
+      .grid-a p{
+        font-weight: 600;
+        font-family: "ADLaM Display", system-ui;
+        margin-top: .8em;
+        color: #044d5e;
+        font-size: 19px;
+
+      }
+      .grid-a-li{
+        margin-top: 1.2em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+      }
+      .btn{
+        margin-top: 1em;
+      }
+      .btn-a{
+        font-family: "ADLaM Display", system-ui;
+      }
+    .grid-b{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      place-content: center;
+      position: relative;
+    }
+      .grid-b-book{
+        width: 120%;
+        height: 100%;
+        align-self: center;
+        transform: translate(3.5em,-1em);
+        rotate: 10deg;
+        z-index: 30000;
+        border-radius: .4rem;
+      }
+      .grid-b-book2{
+        width: 18%;
+        height: 24%;
+        position: absolute;
+        top: 10em;
+        right: 26em;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      .sec-b{
+        height: 110vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: #044d5e;
+        position: relative;
+        padding: 6em 0;
+      }
+      .meal-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+      }
+      .box-img{
+        width: 16em;
+        height: 14em;
+        object-fit: cover;
+        margin-bottom: 1em;
+        border-radius: 1em;
+        transition: .5s;
+      }
+    .box-b{
+       display: flex;
+       flex-direction: column;
+       gap: .1em;
+       align-items: flex-start;
+       /* justify-content: center; */
+       padding: 0em 3em;
+    }
+    .sec-c{
+      background: #fff;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 1em 0;
+    }
+    .custom-shape-divider-top-1726468486 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1726468486 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 73px;
+}
+
+.custom-shape-divider-top-1726468486 .shape-fill {
+    fill: #044d5e;
+}
+    .sec-c h2{
+      color: #044d5e;
+      font-family: "ADLaM Display", system-ui;
+      font-size: 1.8em;
+      margin: 1em 0;
+    }
+    .slider{
+      width: 60vw;
+      height: 70%;
+      background: transparent;
+      padding: 2em 1em;
+      gap: 2em;
+      overflow-x: scroll;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 36%;
+    }
+
+    .slide-box{
+      width: 16em;
+      height: fit-content;
+      background: #fff;
+      display: grid;
+      grid-auto-flow: row;
+      padding: 1em;
+      margin: .4em;
+    }
+    .top{
+      display: flex;
+      flex-direction: row;
+      gap: .2em;
+      align-items: center;
+    }
+    .book{
+      width: 90vw;
+      height: 70vh;
+      background: #044d5e;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 4em 2em;
+    }
+    .book-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .book article{
+       font-weight: 600;
+       color: #fff;
+       margin: .6rem .2em;
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .book-image{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .table{
+        height: 60vh;
+        background: #fff;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1em;
+    }
+    .grid-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:.4rem;
+        grid-auto-columns: 60%;
+        padding: 1em;
+        /* align-items: center;
+        justify-content: center; */
+    }
+
+    .grid-box div{
+       background: #044d5e;
+       width: 60;
+       border-radius: .4rem;
+    }
+    .opt-box{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       gap: 1em;
+    }
+    .opt-box h4{
+      color: #fff;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .profile{
+      display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       gap: 1em;
+       padding: 2em .8rem;
+    }
+    .hide-image{
+      display: block;
+    }
+  }
+
+.timer{
+      display: flex;
+       justify-content: center;
+       align-items: center;
+       gap: .5em;
+       margin-Top: 2.4rem;
+}
+.hr, .min, .sec{
+  font-family: "ADLaM Display", system-ui;
+  font-size: 1.18rem;
+  font-weight: bolder;
+  animation: 1000ms timer infinite ease-in-out ;
+}
+@keyframes timer{
+  from{
+     opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+</style>
+<body>
+    <header>
+        <div style="text-align: center;display:flex;align-items: center;justify-content:center;"> <span style="font-size:1.4em;margin-right: .5rem;color:#fff;">&Star;&Star;&Star;&Star;&Star;</span> <span style="font-size: .65rem;color:#fff;"> Liked by 2,470+ Happy Nigerian Families </span> </div>
+    </header>
+
+    <!-- FIRST SECTION -->
+    <section class="hero">
+        <div class="grid-a" > 
+         <h3 >Everyday Healthy</h3>
+         <h3 >Meal for Your</h3>
+         <h3 >Family and Kids<span style="rotate:(60deg);">.</span></h3>
+         
+         <p class="text-top"> Rediscover Authentic Nigerian Flavours, One Meal at a Time. </p>
+        
+     <!-- List With MARK -->
+         <div class="grid-a-li">
+            <!-- First Mark -->
+            <div style="display: flex;gap: 1em;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                  </svg>
+               <div class="li-text">  Recipes to accommodate allergies and dietary preferences </div>
+            </div>
+
+            <!-- Second Mark -->
+            <div style="display: flex;gap: 1em;"  >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                  </svg>
+               <div class="li-text">  Delicious meals without breaking the bank </div>
+            </div>
+            
+            <!-- Third Mark -->
+            <div style="display: flex;gap: 1em;"  >
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="orange" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                  </svg>
+               <div class="li-text">  Easy to follow recipes and streamlined cooking to save you time </div>
+            </div>
+
+         </div>
+
+
+            <!-- Get in touch btn -->
+         <div class="btn" >
+            <button class="btn-a" style="background: #ff6314 ;border: none;padding: 1em 6em;border-radius: 1em;font-weight: 600;"><a style="color: #fff;" href="https://wa.link/rg2d7r">GET YOUR MEAL PLAN</a></button>
+            
+            <div style="display: flex;justify-content: center;align-items: center;gap: 1em;flex-direction: row;margin-top: 1em;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#044d5e" class="bi bi-shield-shaded" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 14.933a1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+              </svg>
+               <div style="font-weight: 300;text-align: center;font-weight: 500;color: #044d5e;font-size: 14px;">Save Money on Eating Out</div>
+            </div>
+
+         </div>
+        
+       </div>
+
+
+        <div class="grid-b">
+            <div data-aos="zoom-in-left" data-aos-delay="200" data-aos-anchor-placement="center-bottom" >
+                <img class="grid-b-book" src="/Book Cover 1.png">
+            </div>
+
+            <!-- <div >
+                <img class="grid-b-book2" src="/different-Nigerian-dishes 1.png" alt="">
+            </div> -->
+        </div>
+
+
+    </section>
+
+
+
+    <!-- 2ND Section -->
+
+    <section class="sec-b">
+      <!-- Curve -->
+
+      <div class="custom-shape-divider-top-1726366364">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+          </svg>
+       </div>
+
+
+    <!-- First Box >>> Image Box -->
+    <div class="meal-box">
+        <div>
+          <img class="box-img" data-aos-anchor-placement="center-bottom" data-aos="fade-left" style="border: 4px solid #ff6314;" src="/1579770182566517-0 1.png" alt="" srcset="">
+        </div>
+
+        <div>
+          <img class="box-img" data-aos="fade-right" src="/Rectangle 9.png" alt="" srcset="">
+        </div>
+
+        <div class="hide-image">
+          <img class="box-img" data-aos="fade-up"  src="/1ed27acfd3d602c9a9dd81c57d061d0e 1.png" alt="" srcset="">
+        </div>
+
+        <div class="hide-image">
+          <img class="box-img" data-aos="fade-down"  style="border: 4px solid #ff6314;"  src="/Rectangle 12.png" alt="" srcset="">
+        </div>
+    </div>
+
+
+    <!-- Second Box >>> Text Box -->
+    <div class="box-b">
+      <h2 data-aos="zoom-in"  style="color: #fff;font-size: 2em;font-family: ADLaM Display;text-align: center;">Stress no more,</h2>
+      <h2  data-aos="zoom-in" style="color: #fff;font-size: 2.4em;">foodie</h2>
+      <p class="txt"  data-aos="flip-down" style="color: snow;font-weight: 200;font-family: ADLaM Display;">Are you tired of the same old, boring meals and craving healthy, homemade food without breaking the bank ?</p>
+      <p class="txt" data-aos="flip-up" style="font-weight: 700;color: snow;font-size: 18px;">Look no further!</p>
+
+      <div  data-aos="flip-up" data-aos-delay="300"><button style="background: #cfac18;border: none;border-radius: .5em;padding: .8rem 6em;color: #fff;font-weight: 800;font-size: 14px;margin-top: 1.1em;"> From Jollof to Egusi </button></div>
+    
+
+
+      <!-- Meal Plan Tips -->
+
+      <div style="margin-top: .8em;"  data-aos="fade-up">
+        <article style="display: inline;color: snow;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;">
+          <h3 style="display: inline;color: #fff;">The Healthy 30-Day Nigerian Meal Plan </h3> is designed to take the stress out of meal planning and cooking. With over 30 days of delicious, nutritious recipes, this comprehensive guide will help you :
+        </article>
+
+        <ul style="margin-top: .6rem;">
+          <!-- 1 -->
+          <li style="margin-bottom: .4em;color: #fff;">
+            <h3 style="color: #cfac18;display: inline;">Eat Healthier:</h3>
+            Our recipes are packed with fresh, wholesome ingredients that will nourish your body and mind.
+          </li>
+
+          <!--  2 -->
+          <li style="margin-bottom: .4em;color: #fff;">
+            <h3 style="color: #cfac18;display: inline;">Save Money:</h3>
+            By planning your meals ahead of time and shopping efficiently, you'll save money on groceries.
+          </li>
+
+
+          <!--  3 -->
+          <li style="margin-bottom: .4em;color: #fff;">
+            <h3 style="color: #cfac18;display: inline;">Impress your family:</h3>
+             Our recipes are easy to follow and perfect for any occasion, from casual weeknight dinners to special celebrations.
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- Just Write-up -->
+      <div   data-aos="zoom-in">
+         <p style="color: #fff;font-family: ADLaM Display;">
+          Whether you're a busy mom, a working professional, or simply someone who loves to cook, <span style="font-style: oblique;font-weight: 700;color: #cfac18;font-family: ADLaM Display;">The Healthy 30-Day Nigerian Meal Plan </span>has something for everyone. So why wait ? Click the GET YOUR MEAL PLAN button to order for our meal plan for a healthier, happier eating for just chikini N3,000 (was N5,000).
+         </p>
+
+      </div>
+
+      <!-- Note -->
+      <div style="margin-top: 1em;color: rgba(250,250,250,1);font-family: 'Times New Roman', Times, serif;">
+        <i style="font-weight: 900;font-size: 1em;">Note: Price will be going back to N5000 or more, soon. Don't snooze </i>
+     </div>
+    
+    </div>
+
+    </section>
+
+
+
+    <!-- 3rd Section -->
+
+    <section class="sec-c">
+
+      <!-- CURVE -->
+      <div class="custom-shape-divider-top-1726468486">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+      <div class="customer-review">
+        <div>
+          <h2 style="text-align: center;">Hear from our customer</h2>
+        </div>
+
+        <!-- Overflow Slider -->
+        <div class="slider">
+        
+          <!-- SLIDE 1 -->
+          <div  class="slide-box"> 
+             <div class="top">
+                <div><img style="width: 3em;height: 3em;border-radius: 50%;object-fit: cover;" src="/Ellipse 3 (1).png" alt="" srcset=""></div>
+
+                <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+                    <div style="color: #cfac18;font-size: 1.8em;">    &Star;&Star;&Star;&Star;&Star; </div>
+                    <p style="color: #234;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: .8em;font-weight: bolder;font-size: .9em;">Feyisola, A.</p>
+                </div>
+             </div>
+
+           <article style="color: #234;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;padding: .5em;font-weight: 900;">
+             I love how meal planning is slowly ramped up from one week to the next. If you are cooking for a family, it's easy to double the recipes as well.
+           </article>
+          </div>
+
+
+           
+          <!-- SLIDE 2 -->
+          <div  class="slide-box"> 
+            <div class="top">
+               <div><img style="width: 3em;height: 3em;border-radius: 50%;object-fit: cover;" src="/Ellipse 3 (2).png" alt="" srcset=""></div>
+
+               <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+                   <div style="color: #cfac18;font-size: 1.8em;">    &Star;&Star;&Star;&Star;&Star; </div>
+                   <p style="color: #234;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: .8em;font-weight: bolder;font-size: .9em;">Eunice S.</p>
+               </div>
+            </div>
+
+          <article style="color: #234;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;padding: .5em;font-weight: 900;">
+             Na "A" for Amazing dis book dey be! .As a new mom, this book has been a game-changer. Easy to follow, great recipes.
+          </article>
+         </div>
+
+
+          
+          <!-- SLIDE 3 -->
+          <div  class="slide-box"> 
+            <div class="top">
+               <div><img style="width: 3em;height: 3em;border-radius: 50%;object-fit: cover;" src="/Ellipse 3 (3).png" alt="" srcset=""></div>
+
+               <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+                   <div style="color: #cfac18;font-size: 1.8em;">    &Star;&Star;&Star;&Star;&Star; </div>
+                   <p style="color: #234;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: .8em;font-weight: bolder;font-size: .9em;"> Odinaka, B.</p>
+               </div>
+            </div>
+
+          <article style="color: #234;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;padding: .5em;font-weight: 900;">
+              No more "What's for dinner ?" drama lol. This book is a life saver! My family is loving the variety and taste, thanks.
+          </article>
+         </div>
+
+
+
+          
+          <!-- SLIDE 4 -->
+          <div  class="slide-box"> 
+            <div class="top">
+               <div><img style="width: 3em;height: 3em;border-radius: 50%;object-fit: cover;" src="/Ellipse 3 (4).png" alt="" srcset=""></div>
+
+               <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+                   <div style="color: #cfac18;font-size: 1.8em;">    &Star;&Star;&Star;&Star;&Star; </div>
+                   <p style="color: #234;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: .8em;font-weight: bolder;font-size: .9em;"> Grace C.</p>
+               </div>
+            </div>
+
+          <article style="color: #234;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;padding: .5em;font-weight: 900;">
+            My kids actually ask for seconds! I've lost weight, feel more energized, and have been saved money in groceries. I highly recommend this book to every Nigerian out there.
+          </article>
+         </div>
+
+
+              <!-- SLIDE 5 -->
+              <div  class="slide-box"> 
+                <div class="top">
+                   <div><img style="width: 3em;height: 3em;border-radius: 50%;object-fit: cover;" src="/Ellipse 3 (5).png" alt="" srcset=""></div>
+    
+                   <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+                       <div style="color: #cfac18;font-size: 1.8em;">    &Star;&Star;&Star;&Star;&Star; </div>
+                       <p style="color: #234;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: .8em;font-weight: bolder;font-size: .9em;"> Suliyat, O.</p>
+                   </div>
+                </div>
+    
+              <article style="color: #234;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;padding: .5em;font-weight: 900;">
+                 This 30-Day Meal Plan has been a game-changer! I've not only saved time but also money by reducing food waste.
+              </article>
+             </div>
+
+
+                 <!-- SLIDE 6 -->
+                 <div  class="slide-box"> 
+                  <div class="top">
+                     <div><img style="width: 3em;height: 3em;border-radius: 50%;object-fit: cover;" src="https://img.freepik.com/free-photo/delicious-lobster-gourmet-seafood_23-2151713033.jpg?ga=GA1.1.1867688435.1726122157&semt=ais_hybrid" alt="" srcset=""></div>
+      
+                     <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+                         <div style="color: #cfac18;font-size: 1.8em;">    &Star;&Star;&Star;&Star;&Star; </div>
+                         <p style="color: #234;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: .8em;font-weight: bolder;font-size: .9em;"> Oluwakorede, E.</p>
+                     </div>
+                  </div>
+      
+                <article style="color: #234;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;padding: .5em;font-weight: 900;">
+                    The recipes are so simple enough for a guy like me to follow, and they've helped me shed a few pounds without feeling deprived .
+                </article>
+               </div>
+        
+
+        </div>
+
+
+        <div class="price">
+            <div style="display:flex;gap:1em;align-items: center;font-size:1.2em;">
+               <p style="text-decoration: line-through;font-weight: 800;color:red;"> N5000 </p>
+               <p style="background: #044d5e;padding: .5rem 2em;color:#fff;border-radius:.6rem;"> N3000 </p>
+            </div>
+            
+        </div>
+
+      </div>
+
+      <!-- Get in touch btn -->
+      <div class="btn"  >
+        <button class="btn-a" style="background: #ff6314 ;border: none;padding: 1em 6em;color: #fff;border-radius: 1em;font-weight: 600;"><a style="color: #fff;" href="https://wa.link/rg2d7r">GET YOUR MEAL PLAN</a></button>
+        
+        <div style="display: flex;justify-content: center;align-items: center;gap: 1em;flex-direction: row;margin-top: 1em;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#044d5e" class="bi bi-shield-shaded" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 14.933a1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+          </svg>
+           <div style="font-weight: 300;text-align: center;font-weight: 500;color: #044d5e;">Save Money on Eating Out</div>
+        </div>
+
+
+
+  <!-- TIMER -->
+        <div class="timer" style="display:flex;gap:.5rem;"> 
+           <div style="display:flex;gap:.6rem;border: 1px dashed #ff6314;padding: .6rem;border-radius: .6em;align-items: center;">
+             <div class="hr">2</div> <span>hrs</span>
+           </div>
+
+           <span>:</span>
+
+           <div style="display:flex;gap:.6rem;border: 1px dashed #ff6314;padding: .6rem;border-radius: .6em;align-items: center;">
+              <div class="min">59</div> <span>mins</span>
+          </div>
+
+          <span>:</span>
+
+          <div  style="display:flex;gap:.6rem;border: 1px dashed #ff6314;padding: .6rem;border-radius: .6em;align-items: center;">
+             <div class="sec">59</div> <span>sec</span>
+          </div>
+
+        </div>
+<!-- TIMER ENDS  -->
+
+
+      </div>
+
+    </section>
+
+
+<!-- Section 4 -->
+    <section class="book">
+            
+          <div class="book-text">
+              <article>
+                Starting with nutrient rich <span style="color:#cfac18;">pancake</span> and progressing to <span  style="color:#cfac18;"> porridge yam with vegetable </span> and <span  style="color:#cfac18;">hearty dinner,</span> ensuring balanced nutrition that fuels the body with the essential goodness of whole foods.
+              </article>
+
+
+              <article>
+                <p>
+                  By adhering to the 30-day plan, readers can experience notable improvement in energy, digestive health, and overall well being, setting a solid foundation for long-term health benefits.
+                </p>
+              </article>
+
+
+              <article> 
+                  <span  style="color:#cfac18;">The Healthy 30-Day Nigerian Meal Plan </span> not only teaches how to plan delicious meals but also encourages a lasting, healthier lifestyle change.
+              </article>
+              
+          </div>
+
+
+          <div class="book-image" data-aos="fade-up">
+            <img style="object-fit: cover;border-radius:.8rem;" src="/Book Cover 1.png">
+          </div>
+
+    </section>
+
+
+
+    <!-- Section 5 -->
+    <section class="table">
+
+        <div class="grid-box">
+
+            <div class="opt-box">
+                 <h4 style="text-align: center;">Easy-to-find ingredient</h4>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="orange" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                  </svg>
+            </div>
+
+            <div class="opt-box">
+              <h4  style="text-align: center;">Balanced Weight</h4>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="orange" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+              </svg>
+            </div>
+
+
+            <div class="opt-box">
+              <h4  style="text-align: center;">Kids-friendly</h4>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="orange" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+              </svg>
+            </div>
+
+
+            <div class="opt-box">
+              <h4  style="text-align: center;"> Sustainable Eating </h4>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="orange" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+              </svg>
+            </div>
+
+        </div>
+
+
+
+        <div data-aos="fade-up"  class="profile" >
+       
+              <div>
+                <img style="width:7rem;height:7rem;object-fit:cover;border-radius:50%;" src="/Ellipse 3.png">
+              </div>
+
+              <div>
+                <span style="font-size:2em;color:#fff;display:block;text-align:center;">&Star; &Star; &Star; &Star; &Star;</span>
+                <span  style="font-size:1.4em;color:#234;display:block;"> Chef Abuchi N.</span>
+              </div>
+
+              <article  style="font-size:1em;color:#234;display:block;text-align:center;font-weight:bolder;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;">
+                No more 'what's for dinner?' stress, lol. This book is an easy-to-use, step-by-step guide designed to get you to your Primal or Paleo goals with ease, convenience, and the greatest possible enjoyment of food and life!
+              </article>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- Drop down ~~~ FAQS -->
+    <section class="drop-down">
+         <h1 style="font-weight:800;font-size:1.2em;text-align:center;color:#044d5e;">Frequently Asked Questions</h1>
+
+       <div class="faqs-1 faqs">
+
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <p style="font-weight:bolder;margin-bottom: .8em;">What if i don't like a particular meal ?</p>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+              <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+            </svg>
+
+          </div>
+
+         <article class="article-1 hide">
+          Don't worry, you can easily replace any meal with another option from the plan or create your own.
+         </article>
+       </div>
+
+
+       
+       <div class="faqs-2 faqs">
+
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <p style="font-weight:bolder;margin-bottom: .8em;"> How much weight can i loose with this plan ?</p>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+          </svg>
+
+        </div>
+
+       <article class="article-2 hide">
+          The amount of weight you loss will depend on your individual factors like starting weight, activity level, and adherence to the plan. However,  many people see noticeable results within 30 days.
+       </article>
+     </div>
+
+
+
+      <div class="faqs-3 faqs">
+
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <p style="font-weight:bolder;margin-bottom: .8em;"> Can i use this plan to gain weight ?</p>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+              <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+            </svg>
+
+          </div>
+
+         <article class="article-3 hide">
+           Yes, you can. Simply increase the portion sizes or add more calorie-dense foods like nuts and eggs.
+         </article>
+       </div>
+
+
+       <div class="faqs-4 faqs">
+
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <p style="font-weight:bolder;margin-bottom: .8em;"> Who is this plan for ? </p>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+          </svg>
+
+        </div>
+
+       <article class="article-4 hide">
+          This plan is for anyone who wants to eat healthier Nigerian food. It's especially helpful for families, busy individuals, and those looking to loose weight or improve their overall health.
+       </article>
+     </div>
+
+
+  <!-- Get in touch btn -->
+  <div class="btn"  >
+
+    <div class="price" style="margin-bottom:1rem;">
+
+      <div style="display:flex;gap:1em;align-items: center;font-size:1.2em;margin-top:1em;">
+         <p style="text-decoration: line-through;font-weight: 800;color:red;">N5000</p>
+         <p style="background: #044d5e;padding: .5rem 2em;color:#fff;border-radius:.6rem;">N3000</p>
+      </div>
+      
+    </div>
+
+    <button class="btn-a" style="background: #ff6314 ;border: none;padding: 1em 6em;color: #fff;border-radius: 1em;font-weight: 600;"><a style="color: #fff;" href="https://wa.link/rg2d7r">GET YOUR MEAL PLAN</a></button>
+    
+    <div style="display: flex;justify-content: center;align-items: center;gap: 1em;flex-direction: row;margin-top: 1em;">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#044d5e" class="bi bi-shield-shaded" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 14.933a1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+      </svg>
+
+       <div style="font-weight: 300;text-align: center;font-weight: 500;color: #044d5e;">Save Money on Eating Out</div>
+
+     </div>
+
+
+
+     <!-- TIMER -->
+     <div class="timer" style="display:flex;gap:.5rem;"> 
+      <div style="display:flex;gap:.6rem;border: 1px dashed #ff6314;padding: .6rem;border-radius: .6em;align-items: center;">
+        <div class="hr">2</div> <span>hrs</span>
+      </div>
+
+      <span>:</span>
+
+      <div style="display:flex;gap:.6rem;border: 1px dashed #ff6314;padding: .6rem;border-radius: .6em;align-items: center;">
+         <div class="min">59</div> <span>mins</span>
+     </div>
+
+     <span>:</span>
+
+     <div  style="display:flex;gap:.6rem;border: 1px dashed #ff6314;padding: .6rem;border-radius: .6em;align-items: center;">
+        <div class="sec">59</div> <span>sec</span>
+     </div>
+
+   </div>
+<!-- TIMER ENDS  -->
+
+  </div>
+
+    </section>
+
+    <footer style="display:flex;flex-direction:column;gap:1em;align-items:center;padding:1em .6rem;"> 
+      <h3 style="color:#fff;font-family:ADLaM Display;font-size: 1em;">The Healthy 30-Day Nigerian Meal Plan</h3>
+      <p style="color:silver;"> Privacy Policy | Terms and Conditions </p>
+      <p style="color:silver;">All Rights Reserved @ 2024</p>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+
+
+  AOS.init({
+    duration:1300
+  });
+
+   document.querySelector(".faqs-1").addEventListener("click",()=>{
+     document.querySelector(".article-1").classList.toggle("show")
+
+   })
+
+
+   document.querySelector(".faqs-2").addEventListener("click",()=>{
+     document.querySelector(".article-2").classList.toggle("show")
+   })
+
+
+   document.querySelector(".faqs-3").addEventListener("click",()=>{
+     document.querySelector(".article-3").classList.toggle("show")
+   })
+
+
+   document.querySelector(".faqs-4").addEventListener("click",()=>{
+     document.querySelector(".article-4").classList.toggle("show")
+   })
+
+
+    var hr =  document.querySelectorAll(".hr")[0] 
+    var hour = 2
+    var min =  document.querySelectorAll(".min")[0] 
+    var mins = 59
+    var sec =  document.querySelectorAll(".sec")[0] 
+    var secs = 59
+
+    setInterval(()=>{
+       secs -= 1
+       if(secs < 0){
+        secs = 59
+       }
+       sec.innerHTML = secs
+    },1000)
+
+    setInterval(()=>{
+      mins -= 1
+       if(mins < 0){
+        mins = 59
+       }
+       min.innerHTML = mins
+    },60000)
+
+    setInterval(()=>{
+      hour -= 1
+       if(hour < 0){
+         hour = 0
+       }
+       hr.innerHTML = mins
+    },3600000)
+
+
+
+    var hrb =  document.querySelectorAll(".hr")[1] 
+    var hourb = 2
+    var minb =  document.querySelectorAll(".min")[1] 
+    var minsb = 59
+    var secb =  document.querySelectorAll(".sec")[1] 
+    var secsb = 59
+
+    setInterval(()=>{
+       secsb -= 1
+       if(secsb < 0){
+        secsb = 59
+       }
+       secb.innerHTML = secs
+    },1000)
+
+    setInterval(()=>{
+      minsb -= 1
+       if(minsb < 0){
+        minsb = 59
+       }
+       minb.innerHTML = mins
+    },60000)
+
+    setInterval(()=>{
+      hourb -= 1
+       if(hourb < 0){
+         hourb = 0
+       }
+       hrb.innerHTML = mins
+    },3600000)
+
+
+  </script>  
+</body>
+</html>
